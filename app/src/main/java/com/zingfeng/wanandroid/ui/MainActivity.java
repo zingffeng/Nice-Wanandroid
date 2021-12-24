@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.orhanobut.logger.Logger;
 import com.zingfeng.wanandroid.R;
+import com.zingfeng.wanandroid.base.BaseActivity;
 import com.zingfeng.wanandroid.core.bean.BannerData;
 import com.zingfeng.wanandroid.core.bean.BaseResponse;
 import com.zingfeng.wanandroid.core.http.api.RootApi;
@@ -20,15 +22,30 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding mainBinding;
 
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+//        setContentView(mainBinding.getRoot());
+//    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected View getLayoutResID() {
         mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(mainBinding.getRoot());
+        return mainBinding.getRoot();
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initData() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(RootApi.baseURL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -51,5 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void initEvent() {
+
     }
 }
