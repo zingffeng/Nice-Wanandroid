@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Nice-Wanandroid</string>
     <string name="drawer_layout_content_description">主页侧边栏描述</string>
+    <string name="please_input_username">请输入账号</string>
+    <string name="please_inout_password">请输入密码</string>
+    <string name="login">登录</string>
 </resources>

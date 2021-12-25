@@ -17,7 +17,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView();
         initData();
         initEvent();
-        BarUtils.setNavBarColor(this, getResources().getColor(R.color.white));
     }
 
     protected abstract View getLayoutResID();

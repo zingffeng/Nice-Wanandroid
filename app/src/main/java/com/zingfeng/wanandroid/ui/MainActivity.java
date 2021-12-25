@@ -2,6 +2,7 @@ package com.zingfeng.wanandroid.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -72,6 +73,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initEvent() {
-
+        mainBinding.loginBtn.setOnClickListener(v -> {
+            Intent intentLogin = new Intent(this, LoginActivity.class);
+            startActivity(intentLogin);
+        });
     }
 }
