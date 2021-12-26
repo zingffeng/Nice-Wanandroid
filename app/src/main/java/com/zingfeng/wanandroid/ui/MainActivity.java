@@ -4,11 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.orhanobut.logger.Logger;
-import com.zingfeng.wanandroid.R;
 import com.zingfeng.wanandroid.base.BaseActivity;
 import com.zingfeng.wanandroid.core.bean.BannerData;
 import com.zingfeng.wanandroid.core.bean.BaseResponse;

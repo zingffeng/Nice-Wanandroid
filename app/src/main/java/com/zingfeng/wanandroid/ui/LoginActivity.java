@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.zingfeng.wanandroid.R;
 import com.zingfeng.wanandroid.base.BaseActivity;
 import com.zingfeng.wanandroid.databinding.ActivityLoginBinding;
 
