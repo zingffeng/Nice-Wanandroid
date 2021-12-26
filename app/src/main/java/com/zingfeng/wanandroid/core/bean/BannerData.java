@@ -1,5 +1,9 @@
 package com.zingfeng.wanandroid.core.bean;
 
+/**
+ * @author Jake
+ * @date On 2021-12-26
+ */
 public class BannerData {
 
     private String desc;

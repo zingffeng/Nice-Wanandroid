@@ -1,9 +1,6 @@
 package com.zingfeng.wanandroid.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 
 import com.orhanobut.logger.Logger;
@@ -21,16 +18,13 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/**
+ * @author Jake
+ * @date On 2021-12-26
+ */
 public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding mainBinding;
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
-//        setContentView(mainBinding.getRoot());
-//    }
 
     @Override
     protected View getLayoutResID() {
@@ -46,7 +40,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initData() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(RootApi.baseURL)
+                .baseUrl(RootApi.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RootApi request = retrofit.create(RootApi.class);

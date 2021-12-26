@@ -1,20 +1,15 @@
 package com.zingfeng.wanandroid.di.module;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
+/**
+ * @author Jake
+ * @date On 2021-12-26
+ */
 @Module
 public class LoginModule {
-
-    @Provides
-    int age(){
-        return 18;
-    }
-
-    @Provides
-    LoginApi loginApi(int a){
-        return new LoginApi();
-    }
-
 
 }

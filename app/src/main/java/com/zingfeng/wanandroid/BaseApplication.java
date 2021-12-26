@@ -7,6 +7,10 @@ import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 
+/**
+ * @author Jake
+ * @date On 2021-12-26
+ */
 public class BaseApplication extends Application {
 
     @Override
